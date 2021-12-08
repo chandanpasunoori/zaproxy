@@ -505,7 +505,7 @@ public class ExtensionActiveScan extends ExtensionAdaptor
 
         while (!getScanner().isStop()) {
         try {
-        Thread.sleep(1000);
+        Thread.sleep(10);
         } catch (InterruptedException e) {
         }
         }

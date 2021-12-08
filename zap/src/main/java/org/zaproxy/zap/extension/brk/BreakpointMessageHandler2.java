@@ -134,7 +134,7 @@ public class BreakpointMessageHandler2 {
         // releases the current break, not all of them.
         while (breakMgmt.isHoldMessage(aMessage)) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 LOGGER.warn(e.getMessage(), e);
             }

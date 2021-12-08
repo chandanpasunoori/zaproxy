@@ -295,7 +295,7 @@ public class AttackModeScanner implements EventConsumer {
                     }
                     // Still scanning a node or nothing to scan now
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(10);
                     } catch (InterruptedException e) {
                         // Ignore
                     }

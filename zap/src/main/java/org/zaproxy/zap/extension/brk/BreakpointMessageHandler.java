@@ -137,7 +137,7 @@ public class BreakpointMessageHandler {
         // breakPanel.setContinue(false);
         while (breakPanel.isHoldMessage()) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 logger.warn(e.getMessage(), e);
             }

@@ -30,7 +30,7 @@ class UtilUnitTest {
     @Test
     void shouldPauseForGivenDuration() {
         // Given
-        int intendedPause = 500;
+        int intendedPause = 10;
         // When
         long startTime = System.currentTimeMillis();
         Util.sleep(intendedPause);

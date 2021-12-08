@@ -271,7 +271,7 @@ public class ExtensionSearch extends ExtensionAdaptor {
 
                 while (searchThread.isAlive()) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(10);
                     } catch (InterruptedException e) {
                         // Ignore
                     }

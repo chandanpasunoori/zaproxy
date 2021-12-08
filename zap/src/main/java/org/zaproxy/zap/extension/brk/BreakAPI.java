@@ -291,7 +291,7 @@ public class BreakAPI extends ApiImplementor {
             JSONObject params)
             throws ApiException {
         if (PCONN_WAIT_FOR_HTTP_BREAK.equals(name)) {
-            int poll = params.optInt(PARAM_POLL, 500);
+            int poll = params.optInt(PARAM_POLL, 10);
             int keepAlive = params.optInt(PARAM_KEEP_ALIVE, -1);
 
             try {

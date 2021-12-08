@@ -91,7 +91,7 @@ public class CommandLineBootstrap extends HeadlessBootstrap {
                     control.runCommandLine();
 
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(10);
 
                     } catch (final InterruptedException e) {
                     }

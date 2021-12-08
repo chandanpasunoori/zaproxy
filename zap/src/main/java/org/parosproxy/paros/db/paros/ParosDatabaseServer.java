@@ -163,7 +163,7 @@ public class ParosDatabaseServer implements DatabaseServer {
             }
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(10);
                 // ZAP: Changed to catch the InterruptedException.
             } catch (InterruptedException e) {
                 // ZAP: Added the log.

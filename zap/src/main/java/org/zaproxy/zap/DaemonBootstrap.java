@@ -118,7 +118,7 @@ class DaemonBootstrap extends HeadlessBootstrap {
                                 // CoreAPI.handleApiAction uses System.exit to shutdown
                                 while (true) {
                                     try {
-                                        Thread.sleep(100000);
+                                        Thread.sleep(10);
 
                                     } catch (InterruptedException e) {
                                         // Ignore

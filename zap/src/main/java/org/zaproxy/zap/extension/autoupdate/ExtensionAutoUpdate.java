@@ -1128,7 +1128,7 @@ public class ExtensionAutoUpdate extends ExtensionAdaptor
                 int i = 0;
                 while (latestVersionInfo == null && this.remoteCallThread.isAlive() && i < 60) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(10);
                         i++;
                     } catch (InterruptedException e) {
                         // Ignore
@@ -2049,7 +2049,7 @@ public class ExtensionAutoUpdate extends ExtensionAdaptor
     private void waitForDownloadInstalls() {
         while (downloadManager.getCurrentDownloadCount() > 0 || !this.installsCompleted) {
             try {
-                Thread.sleep(200);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 // Ignore
             }

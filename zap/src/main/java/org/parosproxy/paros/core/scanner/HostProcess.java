@@ -370,7 +370,7 @@ public class HostProcess implements Runnable {
 
                 } else {
                     // waiting for dependency - no test ready yet
-                    Util.sleep(1000);
+                    Util.sleep(10);
                 }
             }
             threadPool.waitAllThreadComplete(300000);
@@ -634,7 +634,7 @@ public class HostProcess implements Runnable {
             }
             thread = threadPool.getFreeThreadAndRun(test);
             if (thread == null) {
-                Util.sleep(200);
+                Util.sleep(10);
             }
 
         } while (thread == null);
@@ -780,7 +780,7 @@ public class HostProcess implements Runnable {
 
     private void checkPause() {
         while (parentScanner.isPaused() && !isStop()) {
-            Util.sleep(500);
+            Util.sleep(10);
         }
     }
 

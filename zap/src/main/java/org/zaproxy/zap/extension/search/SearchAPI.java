@@ -327,7 +327,7 @@ public class SearchAPI extends ApiImplementor {
                 false);
 
         while (!searchListener.isSearchComplete()) {
-            Thread.sleep(100);
+            Thread.sleep(10);
         }
 
         TableHistory tableHistory = Model.getSingleton().getDb().getTableHistory();

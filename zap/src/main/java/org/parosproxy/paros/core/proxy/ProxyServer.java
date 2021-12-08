@@ -322,7 +322,7 @@ public class ProxyServer implements Runnable {
                 // unknown IO exception - continue but with delay to avoid eating up CPU time if
                 // continue
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(10);
 
                 } catch (InterruptedException e1) {
                 }

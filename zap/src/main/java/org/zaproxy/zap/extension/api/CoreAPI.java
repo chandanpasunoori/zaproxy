@@ -507,7 +507,7 @@ public class CoreAPI extends ApiImplementor implements SessionListener {
             // Wait for notification that its worked ok
             try {
                 while (this.savingSession) {
-                    Thread.sleep(200);
+                    Thread.sleep(10);
                 }
             } catch (InterruptedException e) {
                 // Probably not an error
@@ -569,7 +569,7 @@ public class CoreAPI extends ApiImplementor implements SessionListener {
             // Wait for notification that its worked ok
             try {
                 while (this.savingSession) {
-                    Thread.sleep(200);
+                    Thread.sleep(10);
                 }
             } catch (InterruptedException e) {
                 // Probably not an error

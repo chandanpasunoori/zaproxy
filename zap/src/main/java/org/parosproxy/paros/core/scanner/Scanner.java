@@ -228,7 +228,7 @@ public class Scanner implements Runnable {
             scan(target);
 
             //	    while (pool.isAllThreadComplete()) {
-            //	        Util.sleep(4000);
+            //	        Util.sleep(10);
             //	    }
             pool.waitAllThreadComplete(0);
         } catch (Exception e) {
@@ -257,7 +257,7 @@ public class Scanner implements Runnable {
                     this.hostProcesses.add(hostProcess);
                     do {
                         thread = pool.getFreeThreadAndRun(hostProcess);
-                        if (thread == null) Util.sleep(500);
+                        if (thread == null) Util.sleep(10);
                     } while (thread == null && !isStop());
                     if (thread != null) {
                         notifyHostNewScan(hostAndPort, hostProcess);
@@ -306,7 +306,7 @@ public class Scanner implements Runnable {
                 this.hostProcesses.add(hostProcess);
                 do {
                     thread = pool.getFreeThreadAndRun(hostProcess);
-                    if (thread == null) Util.sleep(500);
+                    if (thread == null) Util.sleep(10);
                 } while (thread == null && !isStop());
                 if (thread != null) {
                     notifyHostNewScan(hostAndPort, hostProcess);

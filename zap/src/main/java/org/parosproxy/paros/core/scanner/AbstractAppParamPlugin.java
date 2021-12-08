@@ -94,7 +94,7 @@ public abstract class AbstractAppParamPlugin extends AbstractAppPlugin {
 
             // ZAP: Implement pause and resume
             while (getParent().isPaused() && !isStop()) {
-                Util.sleep(500);
+                Util.sleep(10);
             }
         }
     }

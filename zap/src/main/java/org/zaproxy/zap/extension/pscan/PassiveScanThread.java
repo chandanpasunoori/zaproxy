@@ -65,8 +65,8 @@ public class PassiveScanThread extends Thread implements ProxyListener, SessionC
     private PassiveScannerList scannerList = null;
     private int currentId = 1;
     private int lastId = -1;
-    private int mainSleep = 5000;
-    private int postSleep = 200;
+    private int mainSleep = 10;
+    private int postSleep = 10;
     private volatile boolean shutDown = false;
 
     private final ExtensionHistory extHist;

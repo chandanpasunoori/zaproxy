@@ -49,7 +49,7 @@ public class ProxyThreadSSL extends ProxyThread {
         //	    long startTime = System.currentTimeMillis();
         //		while (originProcess!=null && !originProcess.isForwardInputBufferEmpty() &&
         // System.currentTimeMillis() - startTime < 3000) {
-        //			HttpUtil.sleep(300);
+        //			HttpUtil.sleep(10);
         //		}
         //
         //		if (originProcess != null) {
