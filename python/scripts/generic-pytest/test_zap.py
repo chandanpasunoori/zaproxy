@@ -113,28 +113,28 @@ def test_zap(zapconfig):
 
 		os.chdir(zapInstall);
 		os.system(zapScript);
-		time.sleep(20);
+		time.sleep(1);
 	
 	spiderUrls = parser.get("Actions", "spider");
 	if (len(spiderUrls) > 0):
 		for spiderUrl in spiderUrls.split(','):
 			zap.urlopen(spiderUrl)
 			# Give the sites tree a chance to get updated
-			time.sleep(2)
+			time.sleep(1)
 
 			print 'Spidering %s' % spiderUrl
 			zap.start_spider(spiderUrl)
 		
 			# Give the Spider a chance to start
-			time.sleep(2)
+			time.sleep(1)
 			while (int(zap.spider_status[0]) < 100):
 				#print 'Spider progress %: ' + zap.spider_status[0]
-				time.sleep(5)
+				time.sleep(1)
 			print 'Finished spidering %s' % spiderUrl
 			
 		print 'Spider completed'
 		# Give the passive scanner a chance to finish
-		time.sleep(5)
+		time.sleep(1)
 		
 	scanUrls = parser.get("Actions", "scan");
 	if (len(scanUrls) > 0):
@@ -143,14 +143,14 @@ def test_zap(zapconfig):
 			zap.start_scan(scanUrl)
 			while (int(zap.scan_status[0]) < 100):
 				#print 'Scan progress %: ' + zap.scan_status[0]
-				time.sleep(5)
+				time.sleep(1)
 			print 'Finished scanning %s' % scanUrl
 			
 		print 'Scanner completed'
 	
 	saveSession = parser.get("Actions", "savesession");
 	if (len(saveSession) > 0):
-		time.sleep(5)	# Will this help??
+		time.sleep(1)	# Will this help??
 		zap.save_session(saveSession)
 
 	#zapAlerts = zap.alerts	# Save for later, in case ZAP is stopped..

@@ -342,7 +342,7 @@ def main(argv):
             # The url can include a valid path, but always reset to spider the host
             target = target[0:target.index('/', 8)+1]
 
-        time.sleep(2)
+        time.sleep(1)
 
         # Spider target
         zap_spider(zap, target)
@@ -353,7 +353,7 @@ def main(argv):
         if (delay):
             start_scan = datetime.now()
             while ((datetime.now() - start_scan).seconds < delay):
-                time.sleep(5)
+                time.sleep(1)
                 logging.debug('Delay active scan ' + str(delay -(datetime.now() - start_scan).seconds) + ' seconds')
 
         if target.count('/') > 2:

@@ -465,7 +465,7 @@ def main(argv):
         if (delay):
             start_scan = datetime.now()
             while((datetime.now() - start_scan).seconds < delay ):
-                time.sleep(5)
+                time.sleep(1)
                 logging.debug('Delay active scan ' + str(delay -(datetime.now() - start_scan).seconds) + ' seconds')
 
         # Set up the scan policy

@@ -418,11 +418,11 @@ def zap_spider(zap, target):
 
     if not str(spider_scan_id).isdigit():
         raise_scan_not_started()
-    time.sleep(5)
+    time.sleep(1)
 
     while (int(zap.spider.status(spider_scan_id)) < 100):
         logging.debug('Spider progress %: ' + zap.spider.status(spider_scan_id))
-        time.sleep(5)
+        time.sleep(1)
     logging.debug('Spider complete')
 
 
@@ -438,11 +438,11 @@ def zap_ajax_spider(zap, target, max_time):
         result = zap.ajaxSpider.scan(target, contextname=context_name)
     if result != "OK":
         raise_scan_not_started()
-    time.sleep(5)
+    time.sleep(1)
 
     while (zap.ajaxSpider.status == 'running'):
         logging.debug('Ajax Spider running, found urls: %s', zap.ajaxSpider.number_of_results)
-        time.sleep(5)
+        time.sleep()
     logging.debug('Ajax Spider complete')
 
 
@@ -456,11 +456,11 @@ def zap_active_scan(zap, target, policy):
         ascan_scan_id = zap.ascan.scan(target, recurse=True, scanpolicyname=policy, contextid=context_id)
     if not str(ascan_scan_id).isdigit():
         raise_scan_not_started()
-    time.sleep(5)
+    time.sleep(1)
 
     while(int(zap.ascan.status(ascan_scan_id)) < 100):
         logging.debug('Active Scan progress %: ' + zap.ascan.status(ascan_scan_id))
-        time.sleep(5)
+        time.sleep(1)
     logging.debug('Active Scan complete')
     logging.debug(zap.ascan.scan_progress(ascan_scan_id))
 
@@ -472,8 +472,8 @@ def zap_wait_for_passive_scan(zap, timeout_in_secs = 0):
     timed_out = False
     while (int(zap.pscan.records_to_scan) > 0):
         logging.debug('Records to passive scan : ' + zap.pscan.records_to_scan)
-        time.sleep(2)
-        time_taken += 2
+        time.sleep(1)
+        time_taken += 1
         if timeout_in_secs and time_taken > timeout_in_secs:
             timed_out = True
             break
